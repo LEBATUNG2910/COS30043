@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Taco Leo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Loading base css -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Loading google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Loading utility functions -->
+    <script src="js/utils.js"></script>
+    <!-- Using defer to load the script after finishing rendering the DOM -->
+    <script defer src="js/order.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- Temp elements for scroll to top button -->
+    <span id="top"></span>
+    <a href="#top" class="btn ripple__wrapper totop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="{2}"
+          d="M5 11l7-7 7 7M5 19l7-7 7 7"
+        />
+      </svg>
+    </a>
+    <article class="container">
+      <!-- Using BEM sytax for naming class -->
+      <header>
+        <nav class="header__navbar">
+          <!-- Toogle left menu for mobile mode -->
+          <div class="header__navbar__menu--left">
+            <span class="header__navbar__menu--left__line"></span>
+            <span class="header__navbar__menu--left__line"></span>
+            <span class="header__navbar__menu--left__line"></span>
+          </div>
+          <!-- Left side of the navbar show basic pages -->
+          <ul class="header__navbar__wrapper--left">
+            <li class="ripple__wrapper header__navbar__link">
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              class="ripple__wrapper header__navbar__link header__navbar__link--order"
+            >
+              <a href="order.html"
+                >Order
+                <span class="header__navbar__link--order__cart">0</span></a
+              >
+            </li>
+            <li
+              class="ripple__wrapper header__navbar__link header__navbar__link--active"
+            >
+              <a href="features.html">Features</a>
+            </li>
+          </ul>
+          <!-- Middle part of the navbar showing web title or icon -->
+          <div class="header__navbar__wrapper--right">
+            <h4 class="header__navbar__heading">Taco Leo</h4>
+          </div>
+          <!-- Right side of the navbar showing register/login button -->
+          <ul class="header__navbar__wrapper--right">
+            <li class="ripple__wrapper header__navbar__link">
+              <a href="register.html">
+                <span class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="header__navbar__link__inner--desktop"
+                  >Log In/Register</span
+                >
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Box Highlight Navbar when focus or being actived -->
+        <div class="header__navbar__box"></div>
+        <!-- Cover photo for the page -->
+        <div class="header__banner header__banner--home">
+          <h1>Features</h1>
+        </div>
+      </header>
+      <main class="main--features">
+        <h1>Features</h1>
+        <ul>
+          <li>
+            Smooth transition for navbar link highligh with a seperate div
+          </li>
+          <li>To the top button</li>
+          <li>
+            Click the set on the menu to add to the cart.
+            <span><a href="index.html">Here</a></span>
+          </li>
+          <li>
+            Change number of set in cart.
+            <span><a href="order.html">Here</a></span>
+          </li>
+          <li>
+            Material Ui inspired button with ripple. Use on navbar, menu and
+            button in order/register
+          </li>
+          <li>
+            Some cool hover effect. <span><a href="index.html">Here</a></span>
+          </li>
+          <li>Cool banner with taco's shape</li>
+        </ul>
+      </main>
+      <footer>
+        <div class="footer__copyright"><p>Copyright © 2022</p></div>
+        <div class="footer__social">
+          <a
+            href="https://www.facebook.com/TacoLeoVN/?locale=vi_VN"
+            class="footer__social--facebook"
+          >
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.666,2.005C6.62,2.17,2.374,6.251,2.025,11.288c-0.369,5.329,3.442,9.832,8.481,10.589V14.65H8.892 c-0.726,0-1.314-0.588-1.314-1.314v0c0-0.726,0.588-1.314,1.314-1.314h1.613v-1.749c0-2.896,1.411-4.167,3.818-4.167 c0.357,0,0.662,0.008,0.921,0.021c0.636,0.031,1.129,0.561,1.129,1.198v0c0,0.663-0.537,1.2-1.2,1.2h-0.442 c-1.022,0-1.379,0.969-1.379,2.061v1.437h1.87c0.591,0,1.043,0.527,0.953,1.111l-0.108,0.701c-0.073,0.47-0.477,0.817-0.953,0.817 h-1.762v7.247C18.235,21.236,22,17.062,22,12C22,6.366,17.341,1.821,11.666,2.005z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/tacoleovn/"
+            class="footer__social--instagram"
+          >
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>
